@@ -33,7 +33,7 @@ body {
 header {
   background-color: var(--destaque);
   color: var(--texto);
-  padding: 10px;
+  padding: 5px;
   display: flex;
   justify-content: flex-end;
   align-content: center;
@@ -46,6 +46,13 @@ nav#menu ul {
 }
 
 nav#menu a {
+  /* adição para alinhar os icons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* fim da alteração */
+
+
   text-decoration: none;
   color: var(--texto-inverso);
   font-weight: 600;

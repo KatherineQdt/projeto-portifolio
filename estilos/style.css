@@ -33,7 +33,7 @@ body {
 header {
   background-color: var(--destaque);
   color: var(--texto);
-  padding: 5px;
+  padding: 13px;
   display: flex;
   justify-content: flex-end;
   align-content: center;
@@ -46,13 +46,6 @@ nav#menu ul {
 }
 
 nav#menu a {
-  /* adição para alinhar os icons */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* fim da alteração */
-
-
   text-decoration: none;
   color: var(--texto-inverso);
   font-weight: 600;
@@ -64,4 +57,57 @@ nav#menu a {
 nav#menu a:hover {
   background-color: var(--destaque-inverso);
   color: var(--destaque);
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto 90vw auto;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+section#ficha {
+  background-color: var(--fundo-card);
+  padding: 20px;
+  border: 8px;
+  grid-column: 2;
+}
+
+section#ficha img.foto {
+  width: 200px;
+  aspect-ratio: 1/1; /* essa propriedade configura a imagem para ficar quadrada - 1 por 1 como foto de perfil */
+  object-fit: cover;
+  object-position: 50% 13%; /* configura a posição que a imagem ou objeto devem ficar primeiro valor horizontalmente e o segundo valor verticalmente, Pode usar também: object-position: right bottom; */
+  overflow: hidden; /* esconde o "excesso" da imagem ou objeto */
+  border-radius: 50%;
+  border: 5px solid var(--fundo-card);
+  outline: 5px solid var(--destaque); /* borda que fica por "fora" da borda (border) */
+  display: block;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+section#ficha h1 {
+  color: var(--destaque);
+  margin: 15px 0;
+  font-size: 1.5em;
+  text-align: left;
+}
+
+div#social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6em;
+  gap: 1em;
+  margin-top: 15px;
+}
+
+div#social a {
+  color: var(--destaque);
+  transition: color 0.5s;
+}
+
+div#social a:hover {
+  color: var(--destaque-inverso);
 }

@@ -37,6 +37,9 @@ header {
   display: flex;
   justify-content: flex-end;
   align-content: center;
+  position: sticky; /* sticky = colado */
+  top: 0; /* necessário para deixar "grudado" no topo apesar da barra de rolagem */
+  z-index: 1; /* semelhante as camadas do photoshop, por padrao é 0, mas quando alteramos para 1, significa que ficará sobre os demais */
 }
 
 nav#menu ul {
